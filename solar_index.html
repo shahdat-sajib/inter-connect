@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	
+</head>
+<body>
+	<div class="sun planet">
+		<div class="tooltip">
+			<img src="img/sun.png" height="80px" width="80px">
+			<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sun</label>
+			<span class="tooltip-text">
+				<p> 
+					Distance from Earth: 149.60 million km <br> 
+					Radius: 696340 km <br>
+					Volumn: 1.3 million times more than Earth <br>
+					Orbital period: <br> 
+					Elements: 92.1% H2, 7.8% He <br>
+					Star Type: Yellow dwarf <br>
+				
+
+				</p>
+			</span>
+		</div>
+				
+	</div>
+
+	<div class="mercury planet">
+		<div class="tooltip">
+			<img src="img/mercury.png" height="50px" width="50px">
+			<label>&nbsp;mercury</label>
+			<span class="tooltip-text">
+				<p>
+					Elements: <br> 
+					Distance from sun: <br> 
+					Orbital period:
+				</p>
+			</span>
+		</div>
+			
+	</div>
+	<div class="venus planet">
+		<div class="tooltip">
+			<img src="img/venus.png" height="50px" width="50px" >
+		<label>&nbsp;&nbsp;&nbsp;venus</label>
+		<span class="tooltip-text">
+			<p>
+				Elements: <br> 
+				Distance from sun: <br> 
+				Orbital period:
+			</p>
+		</span>
+		</div>
+		
+	</div>
+	<div class="earth planet">
+		<div class="tooltip">
+			<img src="img/planet1.png" height="50px" width="50px">
+		<label>&nbsp;&nbsp;&nbsp;earth</label>
+		<span class="tooltip-text">
+			<p>
+				Elements: <br> 
+				Distance from sun: <br> 
+				Orbital period:
+			</p>
+		</span>
+		</div>
+		
+	</div>
+	<div class="mars planet">
+		<div class="tooltip">
+			<img src="img/mars.png" height="50px" width="50px">
+			<label>&nbsp;&nbsp;&nbsp;mars</label>	
+
+			<span class="tooltip-text">
+				<p>
+					Elements: <br> 
+					Distance from sun: <br> 
+					Orbital period:
+				</p>
+			</span>
+		</div>
+		
+	</div>
+	<div class="jupiter planet">
+		<div class="tooltip">
+			<img src="img/jupitar.png" height="60px" width="60px">
+		<label>&nbsp;&nbsp;&nbsp;jupiter</label>
+		<span class="tooltip-text">
+			<p>
+				Elements: <br> 
+				Distance from sun: <br> 
+				Orbital period:
+			</p>
+		</span>
+		</div>
+		
+	</div>
+	<div class="saturn planet">
+		<div class="tooltip">
+			<img src="img/saturn.png" height="100px" width="100px">
+		<label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;saturn</label>
+		<span class="tooltip-text">
+			<p>
+				Elements: <br> 
+				Distance from sun: <br> 
+				Orbital period:
+			</p>
+		</span>
+		</div>
+		
+	</div>
+	<div class="urenus planet">
+		<div class="tooltip">
+			<img src="img/uranus.png" height="50px" width="50px">
+		<label>&nbsp;&nbsp;urenus</label>
+		<span class="tooltip-text">
+			<p>
+				Elements: <br> 
+				Distance from sun: <br> 
+				Orbital period:
+			</p>
+		</span>
+		</div>
+		
+	</div>
+	<div class="nepchun planet">
+		<div class="tooltip">
+			<img src="img/neptun.png" height="50px" width="50px">
+		<label>&nbsp;&nbsp;&nbsp;neptun</label>
+		<span class="tooltip-text">
+			<p>
+				Elements: <br> 
+				Distance from sun: <br> 
+				Orbital period:
+			</p>
+		</span>
+		</div>
+		
+	</div>
+</body>
+
+<style>
+body {
+	background-image: url('https://wallpapercave.com/wp/wp2610854.png');
+	background-size: 300px 300px;
+}
+
+label{
+	color: white;
+	text-align: center;
+	font-size: 12px;
+}
+
+.planet{
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+}
+
+.mercury{
+
+	width: 15px;
+	height: 15px;
+}
+
+.venus{
+
+	width: 35px;
+	height: 35px;
+}
+
+.earth{
+	width: 25px;
+	height: 25px;
+}
+
+.mars{
+
+	width: 20px;
+	height: 20px;
+}
+
+.jupiter{
+
+	width: 50px;
+	height: 50px;
+}
+
+.saturn{
+
+	width: 50px;
+	height: 50px;
+}
+
+.urenus{
+
+	width: 50px;
+	height: 50px;
+}
+
+.nepchun{
+
+	width: 40px;
+	height: 40px;
+}
+
+
+.tooltip .tooltip-text p{
+  visibility: hidden;
+  width: 200px;
+  background-color: rgb(235, 232, 207);
+  color: rgb(0, 0, 0);
+  padding: 5px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltip-text p{
+  visibility: visible;
+}
+
+
+</style>
+
+<script>
+const sunX = window.innerWidth / 2 - 25;
+const sunY = window.innerHeight / 2 - 25;
+
+const sun = document.querySelector('.sun');
+sun.style.left = `${sunX}px`;
+sun.style.top = `${sunY}px`;
+
+const mercury = {
+	speed: Math.random() * 0.01 + 0.002,
+	theta: Math.random() * 2 * Math.PI,
+	radius: 70,
+	el: document.querySelector('.mercury')
+}
+
+
+const venus = {
+	speed: Math.random() * 0.01 + 0.002,
+	theta: Math.random() * 2 * Math.PI,
+	radius: 100,
+	el: document.querySelector('.venus')
+}
+
+
+const earth = {
+	speed: Math.random() * 0.01 + 0.002,
+	theta: Math.random() * 2 * Math.PI,
+	radius: 150,
+	el: document.querySelector('.earth')
+}
+
+const mars = {
+	speed: Math.random() * 0.01 + 0.002,
+	theta: Math.random() * 2 * Math.PI,
+	radius: 180,
+	el: document.querySelector('.mars')
+}
+
+const jupiter = {
+	speed: Math.random() * 0.01 + 0.002,
+	theta: Math.random() * 2 * Math.PI,
+	radius: 230,
+	el: document.querySelector('.jupiter')
+}
+
+const saturn = {
+	speed: Math.random() * 0.01 + 0.002,
+	theta: Math.random() * 2 * Math.PI,
+	radius: 280,
+	el: document.querySelector('.saturn')
+}
+
+const urenus = {
+	speed: Math.random() * 0.01 + 0.002,
+	theta: Math.random() * 2 * Math.PI,
+	radius: 330,
+	el: document.querySelector('.urenus')
+}
+
+const nepchun = {
+	speed: Math.random() * 0.01 + 0.002,
+	theta: Math.random() * 2 * Math.PI,
+	radius: 380,
+	el: document.querySelector('.nepchun')
+}
+
+const planets = [
+  mercury,
+  venus,
+  earth,
+  mars,
+  jupiter,
+  saturn,
+  urenus,
+  nepchun,
+];
+
+function update(planet) {
+	planet.theta += planet.speed;
+	planet.el.style.left = `${Math.cos(planet.theta) *
+		planet.radius + sunX + 25}px`;
+	planet.el.style.top = `${Math.sin(planet.theta) *
+		planet.radius + sunY + 25}px`;
+}
+
+setInterval(() => {
+	planets.forEach(update);
+}, 10);
+
+
+
+</script>
+</html>
+
+
