@@ -1,0 +1,74 @@
+#overlay {
+  background-color: hsla(22, 9%, 60%, 0.1);
+  width: 100%;
+  border-bottom: 3px solid hsla(22, 9%, 60%, 0.1)
+}
+
+
+#scenarioButton, #sendMessageButton, #backbutton {
+    margin-left: 15px;
+    padding: 10px;
+    color: white;
+    border-color: hsla(0, 0%, 0%, 0.301);
+    border-width: 2px;
+    background-color: black;
+}
+
+#scenarioButton.active, #sendMessageButton.active { background-color: hsla(175, 76%, 44%, 0.856); }
+
+#navitem.active { background-color: hsla(22, 22%, 48%, 0.9); }
+
+#welcome-one {
+  margin-left: 13px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 5px;
+}
+#welcome-add {
+  margin-left: 13px;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 25px;
+}
+#welcome-two {
+  margin-left: 13px;
+  text-align: center;
+
+  margin-bottom: 40px;
+
+}
+#headingfour {
+    text-align: left;
+    margin-left: 15px;
+    margin-bottom: 13px;
+    margin-top: 7px;
+}
+#headingSendMSG {
+    margin-left: 1px;
+    margin-top: 7px;
+}
+.footer {
+    line-height: 60px; /* Vertically center the text there */
+    color: black;
+}
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#scenario1, #scenario222, #scenario333 {
+    padding: 10px;
+    border: 10px solid hsla(0, 0%, 0%, 0.9);
+}
+
+#scenario1:hover{
+  color: #9ef6cd;
+}
+
+#scenario333:hover{
+  color: #9ef6cd;
+}
+
+.card-text{
+  text-align: justify;
+}
